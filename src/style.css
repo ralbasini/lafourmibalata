@@ -19,8 +19,7 @@ h1, h2, h3, .brand-name { font-family: 'Fraunces', Georgia, serif; font-weight: 
 
 /* Soft depth: gentle gradients and layered, low-opacity shadows */
 .hero-bg { background: radial-gradient(60rem 30rem at 85% 20%, #E3F0E6 0%, rgba(227,240,230,0) 70%),linear-gradient(180deg, #F4F7F2 0%, #FFFFFF 100%); }
-.btn-primary { background: linear-gradient(180deg, #2A6B48 0%, #1F5A3B 100%); box-shadow: 0 1px 2px rgba(20,24,26,.15), 0 8px 20px -8px rgba(31,90,59,.55); }
-.btn-primary:hover { box-shadow: 0 2px 4px rgba(20,24,26,.15), 0 12px 24px -8px rgba(31,90,59,.6); }
+.btn-primary { background: linear-gradient(180deg, #2A6B48 0%, #1F5A3B 100%); }
 .card { background: #fff; border-radius: 1.25rem; box-shadow: 0 1px 2px rgba(20,24,26,.05), 0 12px 32px -12px rgba(20,24,26,.15); }
 
 .btn { border-radius: 0.875rem; transition: background-color .2s ease, color .2s ease, border-color .2s ease; }
@@ -32,4 +31,12 @@ h1, h2, h3, .brand-name { font-family: 'Fraunces', Georgia, serif; font-weight: 
   html { scroll-behavior: auto; }
   .fade-in { opacity: 1; transform: none; transition: none; }
   .btn { transition: none; }
+}
+
+/* Hover feedback on service columns and method steps (hover-capable devices only) */
+.hover-lift { padding: 1.5rem; margin: -1.5rem; transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+.hover-lift h3 { transition: color .8s ease; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .hover-lift:hover { transform: translateY(-2px); }
+  .hover-lift:hover h3 { color: #1F5A3B; }
 }
