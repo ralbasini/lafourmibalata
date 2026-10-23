@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { overflow-x: hidden; }
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+body { font-family: 'Figtree', system-ui, sans-serif; color: #14181A; background: #F4F7F2; }
+
+:focus-visible { outline: 3px solid #F28A1E; outline-offset: 3px; }
+
+/* Logo JPG has a white background: multiply lets it sit on the tinted page */
+.logo-blend { mix-blend-mode: multiply; }
+
+.btn { border-radius: 0.875rem; transition: transform .15s ease, background-color .15s ease; }
+.btn:hover { transform: translateY(-2px); }
+
+
+.service-card { border-radius: 1.5rem; transition: transform .2s ease; }
+.service-card:hover { transform: translateY(-4px) rotate(-.6deg); }
+
+.fade-in { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+.fade-in.visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .fade-in { opacity: 1; transform: none; transition: none; }
+  .btn, .service-card { transition: none; }
+}

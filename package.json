@@ -1,0 +1,22 @@
+{
+  "name": "lafourmibalata",
+  "version": "1.0.0",
+  "description": "La Fourmi Balata",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "serve dist"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.14",
+    "tailwindcss": "^3.4.19",
+    "vite": "^8.0.11"
+  },
+  "dependencies": {
+    "serve": "^14.2.6"
+  }
+}
