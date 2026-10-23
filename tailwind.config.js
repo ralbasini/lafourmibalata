@@ -10,6 +10,7 @@ export default {
         mist:  '#F4F7F2',
         straw: '#E8A23A',
         broom: '#D69A55',
+        'broom-deep': '#B5772F',
         sun:   '#EBC884',
         peach: '#F6E8D4',
         pale:  '#DDEFE1',
